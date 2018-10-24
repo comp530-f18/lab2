@@ -108,7 +108,7 @@ struct superblock_bookkeeping * alloc_super (int power) {
     sb->bkeep.free_list = NULL;
   
     // Your code here: Calculate and fill the number of free objects in this superblock
-    //  Be sure to add this many objects to levels[power]->free_objects, reserving
+    //  Be sure to add this many objects to levels[power].free_objects, reserving
     //  the first one for the bookkeeping.
     // Be sure to set free_objects and bytes_per_object to non-zero values.
 
@@ -158,7 +158,7 @@ void *malloc(size_t size) {
             // Your code here
             //
             // NB: If you take the first object out of a whole
-            //     superblock, decrement levels[power]->whole_superblocks
+            //     superblock, decrement levels[power].whole_superblocks
             break;
         }
     }
